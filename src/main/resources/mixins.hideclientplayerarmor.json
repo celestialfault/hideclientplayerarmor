@@ -1,0 +1,12 @@
+{
+  "package": "me.celestialfault.hideclientplayerarmor.mixin",
+  "plugin": "me.celestialfault.hideclientplayerarmor.init.MixinExtrasPlugin",
+  "refmap": "mixins.${modid}.refmap.json",
+  "minVersion": "0.7",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "LayerArmorBaseMixin",
+    "LayerCustomHeadMixin",
+    "NEUCapeMixin"
+  ]
+}

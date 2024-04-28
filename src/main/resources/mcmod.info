@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "${modid}",
+    "name": "Hide Client Player Armor",
+    "description": "Because correctly hiding the player's armor is hard, apparently.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/celestialfault/hideclientplayerarmor",
+    "updateUrl": "",
+    "authorList": [
+      "celeste"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
