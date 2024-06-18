@@ -42,8 +42,7 @@ loom {
     }
     forge {
         pack200Provider.set(dev.architectury.pack200.java.Pack200Adapter())
-        // If you don't want mixins, remove this lines
-        mixinConfig("mixins.$modid.json")
+        mixinConfig("mixins.$modid.json", "mixins.$modid.init.json")
     }
     // If you don't want mixins, remove these lines
     mixin {
@@ -108,7 +107,7 @@ tasks.withType(Jar::class) {
 
         // If you don't want mixins, remove these lines
         this["TweakClass"] = "org.spongepowered.asm.launch.MixinTweaker"
-        this["MixinConfigs"] = "mixins.$modid.json"
+        this["MixinConfigs"] = "mixins.$modid.json,mixins.$modid.init.json"
     }
 }
 
@@ -118,7 +117,7 @@ tasks.processResources {
     inputs.property("modid", modid)
     inputs.property("basePackage", baseGroup)
 
-    filesMatching(listOf("mcmod.info", "mixins.$modid.json")) {
+    filesMatching(listOf("mcmod.info", "mixins.$modid.json", "mixins.$modid.init.json")) {
         expand(inputs.properties)
     }
 
